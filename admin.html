@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Tracking</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#project').show(); $('#filtered-project').show();
+	    	$('#employee').hide(); $('#filtered-employee').hide();
+	    	$('#month').hide(); $('#filtered-month').hide();
+	    });
+
+		function showFilter() {
+		    if ($('#filter').val() == 1) {
+		    	$('#project').show(); $('#filtered-project').show();
+		    	$('#employee').hide(); $('#filtered-employee').hide();
+		    	$('#month').hide(); $('#filtered-month').hide();
+		    }
+		    else if ($('#filter').val() == 2) {
+		    	$('#project').hide(); $('#filtered-project').hide();
+		    	$('#employee').show(); $('#filtered-employee').show();
+		    	$('#month').hide(); $('#filtered-month').hide();
+		    }
+		    else {
+		    	$('#project').hide(); $('#filtered-project').hide();
+		    	$('#employee').hide(); $('#filtered-employee').hide();
+		    	$('#month').show(); $('#filtered-month').show();
+		    }
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="content-header">
+			<div class="logo-wrapper">
+				<img src="img/ripplewave-small-logo.png">
+				<img src="img/logoname.png" width="200px" height="24px">
+			</div>
+			<div class="btn-group">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="icon-user"></i>
+					Olive Law
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Log Out</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="main-header">
+				<div class="float-left"><h3>Dashboard</h3></div>
+				<div class="float-right">
+					<select id="filter" onchange="showFilter();">
+						<option>Filter By</option>
+						<option value="1">Project</option>
+						<option value="2">Employee</option>
+						<option value="3">Month</option>
+					</select>
+					<select id="project">
+						<option>-- Select Project --</option>
+						<option>PMS</option>
+						<option>Nuvali</option>
+						<option>Sureseats</option>
+					</select>
+					<select id="employee">
+						<option>-- Select Employee --</option>
+						<option>Olive Law</option>
+						<option>Melody Carlobos</option>
+						<option>Clariza Larino</option>
+					</select>
+					<select id="month">
+						<option>-- Select Month --</option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+				</div>
+			</div>
+			<div class="table-header">	
+				<div class="date-total float-left">March 25, 2013</div>
+				<div class="date-total float-right"> Total Hrs. Worked: 10hrs</div>
+			</div>
+			<div id="filtered-project">
+				Project
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<td width="10%" class="centered">Actions</td>
+							<td width="15%">Project</td>
+							<td width="10%">Phase</td>
+							<td width="15%">Task</td>
+							<td width="20%" class="centered">Description</td>
+							<td width="10%" class="centered">Hours Worked</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="filtered-employee">
+				Employee
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<td width="10%" class="centered">Actions</td>
+							<td width="15%">Project</td>
+							<td width="10%">Phase</td>
+							<td width="15%">Task</td>
+							<td width="20%" class="centered">Description</td>
+							<td width="10%" class="centered">Hours Worked</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="filtered-month">
+				Month
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<td width="10%" class="centered">Actions</td>
+							<td width="15%">Project</td>
+							<td width="10%">Phase</td>
+							<td width="15%">Task</td>
+							<td width="20%" class="centered">Description</td>
+							<td width="10%" class="centered">Hours Worked</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+						<tr>
+							<td width="10%" class="centered">
+								<button class="btn btn-small" href="#"><i class="icon-pencil"></i></button>
+								<button class="btn btn-small" href="#"><i class="icon-trash"></i></button>
+							</td>
+							<td width="15%">PMS</td>
+							<td width="10%">1</td>
+							<td width="15%">Time Tracking</td>
+							<td width="20%">Aenean sagittis mollis interdum. Phasellus lobortis tincidunt metus, et pharetra sapien eleifend sagittis. Etiam tortor massa, consectetur ut congue sit amet, congue quis felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</td>
+							<td width="10%" class="centered">2hrs</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
