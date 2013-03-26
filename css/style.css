@@ -43,8 +43,21 @@ a:hover {
 	background-color: #910d00 !important;
 	*background-color: #910d00 !important;
 }
-.header {
+.content-header {
 	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.logo-wrapper {
+	display: inline;
+	float: left;
+}
+.btn-group {
+	display: inline;
+	float: right;
+	margin-top: 22px;
 }
 .content {
 	background: #fff;
@@ -54,6 +67,7 @@ a:hover {
 	width: 96%;
 	margin: 0 auto;
 	margin-top: 4%;
+	margin-bottom: 4%;
 	display: table;
 }
 
