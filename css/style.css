@@ -130,6 +130,17 @@ a:hover {
 #month {
 	margin: 0 5px 0 5px;
 }
+.total-hrs {
+	width: 99%;
+	padding: 5px;
+	float: right;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	text-align: right;
+	font-weight: bold;
+	border-bottom: 1px solid #bbbbbb;
+	color: #910d00;
+}
 
 
 
