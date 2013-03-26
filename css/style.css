@@ -141,6 +141,12 @@ a:hover {
 	border-bottom: 1px solid #bbbbbb;
 	color: #910d00;
 }
-
+.filter-header {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.filter-header span {
+	color: #910d00;
+}
 
 
